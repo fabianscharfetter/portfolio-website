@@ -74,6 +74,19 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.95) 90%, #000 100%), url(../assets/img/HeadBg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 /* Sektionen */
 .section {
     margin-top: 12%;
