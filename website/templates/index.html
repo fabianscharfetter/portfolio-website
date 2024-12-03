@@ -6,89 +6,145 @@
     <title>Fabian Scharfetter Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Fabian Scharfetter</h1>
-
             <div class="header-right">
-                <nav>
-                    <a href="#about">Über mich</a>
-                    <a href="#projects">Projekte</a>
-                    <a href="#contact">Kontakt</a>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand">Fabian Scharfetter</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#timeline">Mein Werdegang</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projekte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
     </header>
-    <hr>
+
+    <div class="masthead">
+        <div class="mastheadcontainer d-flex h-100 align-items-center justify-content-center">
+            <div class="text-center">
+                <h1 class="text-uppercase">Fabian Scharfetter</h1>
+                <h2 class="text-white-50 mt-2 mb-5">Software Developer</h2>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section id="about" class="section">
-            <h2>Über mich</h2>
-            <p>
-                Ich bin ein Allrounder mit einem außergewöhnlich breiten Erfahrungshorizont – von Maurerarbeiten über Elektrik bis hin zu Fliesenlegen und natürlich Programmieren. In den letzten Jahren habe ich meine Leidenschaft für das Programmieren entdeckt und mich erfolgreich in der digitalen Welt zurechtgefunden.
-            </p>
+            <h2>                
+                Hallo!
+            </h2>
+            <h4>                
+                Ich bin Fabian Scharfetter aus Radstadt. Mit Erfahrung mit verschiedenen Programmiersprachen und Technologien bin ich stets auf der Suche nach neuen Herausforderungen, um mich weiterzuentwickeln. Neben der IT pflege ich meine Leidenschaft für Sport und Musik.
+            </h4>     
+        </section>
+
+        <section id="timeline" class="section">
+            <h2>Mein Werdegang</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>MMS Radstadt 🎼</h4>
+                    </div>
+                    <div class="timeline-date">2016 - 2020</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>HTL Saalfelden 🧑‍🎓</h4>
+                    </div>
+                    <div class="timeline-date">2020 - 2025</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Eurofunk Kappacher 🧑‍💻</h4>
+                        <h4>(Praktikum)</h4>
+                    </div>
+                    <div class="timeline-date">2021</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Elektrotechnik Stefan Hochwimmer 🧑‍🔧</h4>
+                        <h4>(Praktikum)</h4>
+                    </div>
+                    <div class="timeline-date">2022</div>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="section">
             <h2>Projekte</h2>
-            <br>
-
-
-
-
-            <div class="project">
-                <img src="./pictures/lagarage_logo.svg" alt="Visual-Object-Recognition">
-                <div class="project-info">
-                    <h3>Diplomarbeit: Visual-Object-Recognition</h3>
-                    <p>
-                        Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.
-                    </p>
+            <div class="projects">
+                <a href="https://github.com/fabianscharfetter/diplomarbeit" target="_blank" class="project-link">
+                    <div class="project">
+                        <img src="./pictures/lagarage_logo.svg" alt="Visual-Object-Recognition">
+                        <div class="project-info">
+                            <h3>Diplomarbeit: Visual-Object-Recognition</h3>
+                            <p>Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="project">
+                    <img src="./pictures/mbot.jpg" alt="MBot">
+                    <div class="project-info">
+                        <h3>Mbot Projekt</h3>
+                        <p>Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./pictures/lagarage_logo.svg" alt="Visual-Object-Recognition">
+                    <div class="project-info">
+                        <h3>Diplomarbeit: Visual-Object-Recognition</h3>
+                        <p>Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar. Wiederholung des Projekts.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./pictures/mbot.jpg" alt="MBot">
+                    <div class="project-info">
+                        <h3>Mbot Projekt</h3>
+                        <p>Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.</p>
+                    </div>
                 </div>
             </div>
-            <div class="project">
-                <img src="./pictures/mbot.jpg" alt="MBot">
-                <div class="project-info">
-                    <h3>Mbot Projekt</h3>
-                    <p>
-                        Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.
-                    </p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="./pictures/lagarage_logo.svg" alt="Visual-Object-Recognition">
-                <div class="project-info">
-                    <h3>Diplomarbeit: Visual-Object-Recognition</h3>
-                    <p>
-                        Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar. Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar. Ein Projekt mit der Lagerage GmbH: Kamerabilder erkennen Objekte im Lager und erstellen ein Inventar.
-
-
-                    </p>
-                </div>
-            </div>
-
-
-
-
         </section>
 
-        <section id="contact" class="section">
+        <section id="contact" class="section contact">
             <h2>Kontakt</h2>
             <p>Hier bin ich erreichbar:</p>
             <div id="contact-links">
-                <a href="mailto:fabian.scharfetter@gmail.com">
+                <a href="mailto:fabian.scharfetter@gmail.com" class="contact-link">
                     <i class="fa fa-envelope"></i> fabian.scharfetter@gmail.com
                 </a>
-                <a href="tel:+436769206400">
+                <a href="tel:+436769206400" class="contact-link">
                     <i class="fa fa-phone"></i> +43 664 1900355
+                </a>
+                <a href="https://github.com/fabianscharfetter" target="_blank" class="contact-link">
+                    <i class="fa fa-github"></i> GitHub
                 </a>
             </div>
         </section>
     </main>
 
-
-    <hr>
     <footer>
         <p>&copy; 2025 Fabian Scharfetter. Alle Rechte vorbehalten</p>
     </footer>

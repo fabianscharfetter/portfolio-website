@@ -1,176 +1,310 @@
-/* Farbpalette für Dark Mode */
-:root {
-    --primary-color: #2d3436; /* Dunkles Grau */
-    --secondary-color: #00b894; /* Frisches Türkis (Akzentfarbe) */
-    --background-color: #121212; /* Dunkelgrau */
-    --text-color: #ffffff; /* Weiß für Text */
-    --link-hover-color: #55efc4; /* Helles Türkis bei Hover */
-    --footer-bg-color: #2d3436; /* Dunkelgrau für Footer */
-}
-
-/* Allgemeine Stile */
+/* Grundlegende Reset-Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 main{
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
+    text-align: center;
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color);
-    text-align: left;
-    padding: 1.5rem;
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-right: 35%;
+/* Navbar */
+header .navbar-toggler {
+    border-color: #fff;
 }
 
-.header-right {
-    float: right;
+header .navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-header nav {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    max-height: 45px;
+/* Hover-Effekt für die Navbar-Links */
+header .navbar-nav .nav-link:hover {
+    color: #ff6f61; /* Farbänderung */
+    text-decoration: underline; /* Unterstreichung */
 }
 
-header nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header nav a:hover {
-    color: var(--secondary-color);
-}
-
+/* Masthead */
 .masthead {
     position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 35rem;
-    padding: 15rem 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.95) 90%, #000 100%), url(../assets/img/HeadBg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+    height: 100vh;
+    color: white;
 }
 
-/* Sektionen */
+/* Dunkle Überlagerung */
+.masthead:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Inhalt innerhalb des Masthead */
+.mastheadcontainer {
+    position: relative;
+    z-index: 2;
+}
+
+.masthead h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+.masthead h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+
+/* Section Styles */
 .section {
-    margin-top: 12%;
-    margin-bottom: 12%;
-    text-align: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
 }
-.section img {
-    max-height: 150px;
-}
+
 
 .section h2 {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #343a40;
+    transition: color 0.3s ease;
 }
 
-.section p {
-    max-width: 800px;
-    margin: 0 auto;
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: left;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekt für Timeline-Item */
+.timeline-item:hover {
+    transform: translateX(10px); /* Verschiebung bei Hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten */
+}
+
+.timeline-date {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+/* Hover-Effekt für Timeline-Date */
+.timeline-date:hover {
+    color: #007bff; /* Farbänderung für das Datum */
+}
+
+.timeline-content h4 {
     font-size: 1.1rem;
-    line-height: 1.8;
+    font-weight: 500;
+    color: #333;
 }
 
 /* Projekte */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    transition: grid-template-columns 0.3s ease;
+}
+
+/* Hover-Effekt für Projektbilder */
 .project {
-    display: flex;
-    justify-content: left;
-    text-align: left;    
-    margin-bottom: 3rem;
-    background-color: #333;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten */
 }
 
 .project img {
-    width: 150px;
+    width: 100%;
     border-radius: 8px;
-    margin-right: 2.5rem;
+    max-height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
+
 .project-info {
-    color: var(--text-color);
+    margin-top: 10px;
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Hover-Effekt für Projektnamen */
+.project-info h3:hover {
+    color: #007bff; /* Farbwechsel */
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Kontakt */
-#contact-links a {
-    display: inline-block;
-    margin: 0.5rem;
-    color: var(--secondary-color);
+#contact-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.contact-link {
+    color: #007bff;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Abstand zwischen Icon und Text */
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 30%;
 }
 
-#contact-links a:hover {
-    color: var(--link-hover-color);
+/* Hover-Effekt für Kontakt-Links */
+.contact-link:hover {
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Leichtes Anheben beim Hover */
 }
 
-#contact-links i {
-    margin-right: 0.5rem;
+.contact-link i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
 }
+
+/* Hover-Effekt für Icons */
+.contact-link:hover i {
+    transform: scale(1.2); /* Vergrößert das Icon beim Hover */
+}
+
+#contact-links a {
+    color: #007bff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    #contact-links {
+        gap: 15px;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+
+    .contact-link i {
+        font-size: 1.3rem;
+    }
+}
+
 
 /* Footer */
 footer {
+    background-color: #343a40;
+    color: white;
     text-align: center;
-    background-color: var(--footer-bg-color);
-    color: var(--text-color);
-    padding: 3rem;
+    padding: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
+/* Hover-Effekt für Footer */
+footer:hover {
+    background-color: #23272b; /* Dunklere Hintergrundfarbe */
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+    header .navbar-nav {
+        text-align: center;
     }
-    .header-right {
-      float: none;
+
+    header .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr; /* Alle Projekte untereinander */
+    }
+
+    .masthead h1 {
+        font-size: 2rem;
+    }
+
+    .masthead h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Timeline untereinander */
+    .timeline {
+        display: flex;
+        flex-direction: column;
     }
 }
