@@ -18,8 +18,11 @@ main{
 /* Header */
 header {
     background-color: #343a40;
-    color: white;
+    color: #ffffff;
     padding: 20px 0;
+    border-bottom-color: #fff;
+    border-bottom-width: 1px; 
+    border-bottom-style: solid;   
 }
 
 /* Navbar */
@@ -28,7 +31,6 @@ header .navbar-toggler {
 }
 
 header .navbar-nav .nav-link {
-    color: #fff !important;
     font-size: 1.1rem;
     padding: 10px;
     transition: all 0.3s ease;
@@ -36,14 +38,13 @@ header .navbar-nav .nav-link {
 
 /* Hover-Effekt für die Navbar-Links */
 header .navbar-nav .nav-link:hover {
-    color: #ff6f61; /* Farbänderung */
-    text-decoration: underline; /* Unterstreichung */
+    color: #007bff; /* Farbänderung */
 }
 
 /* Masthead */
 .masthead {
     position: relative;
-    background: linear-gradient(135deg, #333 0%, #000 100%);
+    background: linear-gradient(135deg, #464646 0%, #000000 100%);
     height: 100vh;
     color: white;
 }
@@ -70,7 +71,7 @@ header .navbar-nav .nav-link:hover {
     font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px #007bff;
     transition: all 0.3s ease;
 }
 .masthead h2 {
@@ -110,6 +111,10 @@ header .navbar-nav .nav-link:hover {
     text-align: left;
 }
 
+.timeline a{
+    text-decoration: none;
+}
+
 .timeline-item {
     display: flex;
     justify-content: space-between;
@@ -125,6 +130,10 @@ header .navbar-nav .nav-link:hover {
 .timeline-item:hover {
     transform: translateX(10px); /* Verschiebung bei Hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Verstärkter Schatten */
+}
+
+.timeline-link :hover{
+    color: #007bff; 
 }
 
 .timeline-date {
@@ -145,13 +154,15 @@ header .navbar-nav .nav-link:hover {
     color: #333;
 }
 
+
 /* Projekte */
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     transition: grid-template-columns 0.3s ease;
 }
+
 
 /* Hover-Effekt für Projektbilder */
 .project {
@@ -162,6 +173,9 @@ header .navbar-nav .nav-link:hover {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.projects a {
+    text-decoration: none;
+}
 
 .project:hover {
     transform: translateY(-10px);
@@ -171,7 +185,7 @@ header .navbar-nav .nav-link:hover {
 .project img {
     width: 100%;
     border-radius: 8px;
-    max-height: 200px;
+    max-height: 180px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -191,6 +205,7 @@ header .navbar-nav .nav-link:hover {
 /* Hover-Effekt für Projektnamen */
 .project-info h3:hover {
     color: #007bff; /* Farbwechsel */
+    text-decoration: underline;
 }
 
 .project-info p {
@@ -268,9 +283,13 @@ footer {
     background-color: #343a40;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.5rem;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
+    
+    border-top-color: #000000;
+    border-top-width: 2px; 
+    border-top-style: solid;   
 }
 
 /* Hover-Effekt für Footer */
@@ -307,4 +326,18 @@ footer:hover {
         display: flex;
         flex-direction: column;
     }
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
