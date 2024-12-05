@@ -100,6 +100,12 @@ header .navbar-nav .nav-link:hover {
     margin-right: 30%;
     text-align: left;
 }
+@media (max-width: 768px) {
+    .timeline{
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 .timeline a{
     text-decoration: none;
