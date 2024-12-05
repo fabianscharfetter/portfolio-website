@@ -41,44 +41,34 @@ header .navbar-nav .nav-link:hover {
     color: #007bff; /* Farbänderung */
 }
 
-/* Masthead */
+/* Der gesamte Bildschirm wird abgedeckt */
 .masthead {
     position: relative;
-    background: linear-gradient(135deg, #464646 0%, #000000 100%);
-    height: 100vh;
-    color: white;
+    height: 90vh; /* 100% der Höhe des Viewports */
+    background: url('alps.jpg') no-repeat center center/cover; /* Hintergrundbild */
+    display: flex;
+    justify-content: center; /* Zentriert den Content horizontal */
+    align-items: center; /* Zentriert den Content vertikal */
+    color: white; /* Textfarbe */
 }
 
-/* Dunkle Überlagerung */
-.masthead:before {
+/* Abdunkelung des Hintergrunds */
+.masthead::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.7); /* Schwarzes Overlay mit Transparenz */
+    z-index: 1; /* Hinter dem Content, aber über dem Bild */
 }
 
-/* Inhalt innerhalb des Masthead */
-.mastheadcontainer {
-    position: relative;
-    z-index: 2;
-}
-
-.masthead h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px #007bff;
-    transition: all 0.3s ease;
-}
-.masthead h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #ddd;
-    transition: color 0.3s ease;
+/* Vordergrundinhalt */
+.masthead-content {
+    position: relative; /* Bleibt über dem Overlay */
+    z-index: 2; /* Über dem Overlay sichtbar */
+    text-align: center; /* Zentrierter Text */
 }
 
 
@@ -185,7 +175,7 @@ header .navbar-nav .nav-link:hover {
 .project img {
     width: 100%;
     border-radius: 8px;
-    max-height: 180px;
+    max-height: 250px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
