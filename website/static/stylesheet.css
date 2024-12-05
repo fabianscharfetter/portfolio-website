@@ -45,7 +45,7 @@ header .navbar-nav .nav-link:hover {
 .masthead {
     position: relative;
     height: 90vh; /* 100% der Höhe des Viewports */
-    background: url('alps.jpg') no-repeat center center/cover; /* Hintergrundbild */
+    background: url('./pictures/alps.jpg') no-repeat center center/cover; /* Hintergrundbild */
     display: flex;
     justify-content: center; /* Zentriert den Content horizontal */
     align-items: center; /* Zentriert den Content vertikal */

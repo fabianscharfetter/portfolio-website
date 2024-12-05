@@ -1,0 +1,7 @@
+[build]
+  command = "cd website && zola build"
+  publish = "website/public"
+
+
+[build.environment]
+ZOLA_VERSION = "0.19.2"
